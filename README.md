@@ -27,7 +27,8 @@ mkdir -p ~/.config/systemd/user
 vmname="vmname"
 delay="60000"
 output="schedstat"
-cat misc/schedprobe.service | sed "s/#vmname#/$vmname/g" | sed "s/#delay#/$delay/g" | sed "s/#output#/$output/g" >> ~/.config/systemd/user/schedprobe.service
+location=$( pwd )
+cat misc/schedprobe.service | sed "s/#location#/$location/g" | sed "s/#vmname#/$vmname/g" | sed "s/#delay#/$delay/g" | sed "s/#output#/$output/g" >> ~/.config/systemd/user/schedprobe.service
 systemctl --user daemon-reload
 systemctl --user start schedprobe
 systemctl --user status schedprobe

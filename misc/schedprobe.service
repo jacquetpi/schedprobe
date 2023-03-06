@@ -4,7 +4,7 @@ After=multi-user.target
 
 [Service]
 Type=simple
-ExecStart=/bin/bash -c 'cd /usr/local/src/schedprobe && source venv/bin/activate && python3 schedprobe.py --name=#vmname# --delay=#delay# --output=#output#'
+ExecStart=/bin/bash -c 'cd #location# && source venv/bin/activate && python3 schedprobe.py --name=#vmname# --delay=#delay# --output=#output#'
 Restart=on-failure
 
 [Install]
