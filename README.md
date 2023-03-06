@@ -22,16 +22,7 @@ A notebook is present for example purposes
 ## Background usage
 
 ```bash
-loginctl enable-linger pierre
-mkdir -p ~/.config/systemd/user
-vmname="vmname"
-delay="60000"
-output="schedstat"
-location=$( pwd )
-cat misc/schedprobe.service | sed "s/#location#/$location/g" | sed "s/#vmname#/$vmname/g" | sed "s/#delay#/$delay/g" | sed "s/#output#/$output/g" >> ~/.config/systemd/user/schedprobe.service
-systemctl --user daemon-reload
-systemctl --user start schedprobe
-systemctl --user status schedprobe
+./backgroundprobe.sh hostname delay output
 sleep {duration}
 systemctl --user stop schedprobe
 ```
