@@ -75,7 +75,7 @@ def parse(cpu_dict : dict, timestamp_ms : int):
 if __name__ == '__main__':
     
     short_options = "n:d:o:h"
-    long_options = ["name=","delay=","output","help"]
+    long_options = ["name=","delay=","output=","help"]
 
     host_name = None
     delay = 60000 # 60s
