@@ -5,15 +5,13 @@ Expose scheduler stats (as delta) in a csv format
 ## Installation
 
 ```bash
-python3 -m venv venv
-source venv/bin/activate
-python3 -m pip install -r requirements
+git clone https://github.com/jacquetpi/schedprobe
+cd schedprobe
 ```
 
 ## Usage
 
 ```bash
-source venv/bin/activate
 python3 schedprobe.py --name={hostname} --delay={delay_in_ms} --output={output}
 ```
 
